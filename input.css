@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	p, ol, ul {
+		@apply mb-6;
+	}
+	
+	strong {
+		@apply font-bold;
+	}
+	
+	b {
+		@apply font-normal;
+	}
+	
+	strong, b {
+		@apply text-stone-950;
+	}
+	
+	a {
+		@apply underline;
+	}
+}
