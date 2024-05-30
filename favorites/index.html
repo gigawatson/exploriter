@@ -10,7 +10,7 @@
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Vollkorn&family=Inter&family=Space+Grotesk&family=EB+Garamond&family=Pirata+One&display=swap" rel="stylesheet">
 	<link href="../output.css" rel="stylesheet">
 </head>
 <body class="antialiased font-averia text-stone-900 px-10 md:px-14 md:py-10 py-8 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">
@@ -25,53 +25,68 @@
 		<p class="font-light italic text-stone-500 text-sm">explo(r|it)er. truth-teller; reputable fabulist.</p>
 	</header>
 	<main class="font-light max-w-xl">
-		<p><i>These are a few of my favorite things &hellip;</i></p>
-		<h2>TV</h2>
-		<ol class="list-decimal ml-6">
-			<li class="mb-2">Black Sails</li>
-			<li class="mb-2">Justified</li>
-			<li class="mb-2">Burn Notice</li>
-			<li class="mb-2">The Last Kingdom</li>
-			<li class="mb-2">The Last of Us</li>
-			<li class="mb-2">Deadwood</li>
-			<li class="mb-2">Breaking Bad</li>
+		<header class="flex items-center gap-1 mb-4">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+				<path d="M12 5H4v4h8V5Z" />
+				<path fill-rule="evenodd" d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-4v1.5h2.25a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5H6V12H2a1 1 0 0 1-1-1V3Zm1.5 7.5v-7h11v7h-11Z" clip-rule="evenodd" />
+			</svg>
+			<h2 class="font-ibmplex text-sm font-normal border-b border-stone-400">TV</h2>
+		</header>
+		<ol class="flex flex-wrap gap-3 leading-none list-decimal list-inside marker:text-stone-400">
+			<li>Black Sails</li>
+			<li>Justified</li>
+			<li>Burn Notice</li>
+			<li>The Last Kingdom</li>
+			<li>The Last of Us</li>
+			<li>Deadwood</li>
+			<li>Breaking Bad</li>
 		</ol>
-		<h2>Games</h2>
-		<ol class="list-decimal ml-6">
-			<li class="mb-2">The Last of Us (Part 1 & 2)</li>
-			<li class="mb-2">Red Dead Redemption 2</li>
-			<li class="mb-2">The Witcher: Wild Hunt</li>
-			<li class="mb-2">Assassin's Creed Origins</li>
-			<li class="mb-2">Assassin's Creed Odyssey</li>
-			<li class="mb-2">Assassin's Creed Black Flag</li>
-			<li class="mb-2">Hogwarts Legacy</li>
-			<li class="mb-2">Psychonauts 2</li>
-			<li class="mb-2">Bioshock (1 & 2)</li>
-			<li class="mb-2">Gears of War 2</li>
-			<li class="mb-2">Destiny (1 & 2)</li>
-			<li class="mb-2">Star Wars: Knights of the Old Republic</li>
-			<li class="mb-2">World of Warcraft (vanilla)</li>
-			<li class="mb-2">Chrono Trigger</li>
-			<li class="mb-2">The Elder Scrolls V: Skyrim</li>
-			<li class="mb-2">Secret of Mana</li>
-			<li class="mb-2">Day of the Tentacle</li>
-			<li class="mb-2">EarthBound</li>
-			<li class="mb-2">Portal 2</li>
-			<li class="mb-2">Kingdom Rush</li>
-			<li class="mb-2">Mass Effect 2</li>
-			<li class="mb-2">Pokemon Blue</li>
-			<li class="mb-2">The Legend of Zelda: A Link to the Past</li>
-			<li class="mb-2">The Legend of Zelda: Breath of the Wild</li>
+		<header class="flex items-center gap-1 mb-4">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+				<path fill-rule="evenodd" d="M2 4.25A2.25 2.25 0 0 1 4.25 2h7.5A2.25 2.25 0 0 1 14 4.25v5.5A2.25 2.25 0 0 1 11.75 12h-1.312c.1.128.21.248.328.36a.75.75 0 0 1 .234.545v.345a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-.345a.75.75 0 0 1 .234-.545c.118-.111.228-.232.328-.36H4.25A2.25 2.25 0 0 1 2 9.75v-5.5Zm2.25-.75a.75.75 0 0 0-.75.75v4.5c0 .414.336.75.75.75h7.5a.75.75 0 0 0 .75-.75v-4.5a.75.75 0 0 0-.75-.75h-7.5Z" clip-rule="evenodd" />
+			</svg>
+			<h2 class="font-ibmplex text-sm font-normal border-b border-stone-400">Video Games</h2>
+		</header>
+		<ol class="flex flex-wrap gap-3 leading-none list-decimal list-inside marker:text-stone-400">
+			<li>The Last of Us (Part 1 & 2)</li>
+			<li>Red Dead Redemption 2</li>
+			<li>The Witcher: Wild Hunt</li>
+			<li>Assassin's Creed Origins</li>
+			<li>Assassin's Creed Odyssey</li>
+			<li>Assassin's Creed Black Flag</li>
+			<li>Hogwarts Legacy</li>
+			<li>Psychonauts 2</li>
+			<li>Bioshock (1 & 2)</li>
+			<li>Gears of War 2</li>
+			<li>Destiny (1 & 2)</li>
+			<li>Star Wars: Knights of the Old Republic</li>
+			<li>World of Warcraft (vanilla)</li>
+			<li>Chrono Trigger</li>
+			<li>The Elder Scrolls V: Skyrim</li>
+			<li>Secret of Mana</li>
+			<li>Day of the Tentacle</li>
+			<li>EarthBound</li>
+			<li>Portal 2</li>
+			<li>Kingdom Rush</li>
+			<li>Mass Effect 2</li>
+			<li>Pokemon Blue</li>
+			<li>The Legend of Zelda: A Link to the Past</li>
+			<li>The Legend of Zelda: Breath of the Wild</li>
 		</ol>
-		<h2>Typefaces</h2>
-		<ol class="list-decimal ml-6">
-			<li class="mb-2">IBM Plex Mono</li>
-			<li class="mb-2">Vollkorn</li>
-			<li class="mb-2">Inter</li>
-			<li class="mb-2">Space Grotesk</li>
-			<li class="mb-2">Averia Serif Libre</li>
-			<li class="mb-2">EB Garamond</li>
-			<li class="mb-2">Pirata One</li>
+		<header class="flex items-center gap-1 mb-4">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+				<path fill-rule="evenodd" d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+			</svg>
+			<h2 class="font-ibmplex text-sm font-normal border-b border-stone-400">Typefaces</h2>
+		</header>
+		<ol class="flex flex-wrap gap-3 leading-none list-decimal list-inside marker:text-stone-400 text-xl items-baseline">
+			<li class="font-ibmplex font-normal">IBM Plex Mono</li>
+			<li class="font-vollkorn font-normal">Vollkorn</li>
+			<li class="font-inter font-normal">Inter</li>
+			<li class="font-spacegrotesk font-normal">Space Grotesk</li>
+			<li>Averia Serif Libre</li>
+			<li class="font-ebgaramond font-normal">EB Garamond</li>
+			<li class="font-pirataone font-normal">Pirata One</li>
 		</ol>
 	</main>
 </body>
