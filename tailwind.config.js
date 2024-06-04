@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
+  darkMode: 'selector',
   content: [
     './**/index.html',
   ],
