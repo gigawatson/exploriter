@@ -17,6 +17,7 @@
 	
 	strong, b {
 		@apply text-stone-950;
+		@apply dark:text-stone-50;
 	}
 	
 	a {

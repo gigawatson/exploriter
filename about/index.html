@@ -12,19 +12,39 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 	<link href="../output.css" rel="stylesheet">
+	<script defer src="../output.js"></script>
 </head>
-<body class="antialiased font-averia text-stone-900 px-10 md:px-14 md:py-10 py-8 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">
+<body class="antialiased font-averia text-stone-900 dark:text-stone-50 px-10 md:px-14 md:py-10 py-8 bg-stone-50 dark:bg-stone-900 selection:bg-yellow-300 selection:text-yellow-900">
+	<div class="border rounded-full border-stone-200 dark:border-stone-700 p-1 flex fixed bottom-6 right-6">
+		<button x-data @click="$store.darkMode.light()" class="rounded-full size-8 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none" :class="$store.darkMode.mode == 'light' ? 'bg-stone-200 text-stone-900' : ''">
+			
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-5" viewBox="0 0 16 16">
+				<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+			</svg>
+		</button>
+		<button x-data @click="$store.darkMode.system()" class="rounded-full size-8 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none" :class="$store.darkMode.mode == 'system' ? 'bg-stone-200 dark:bg-stone-700 text-stone-900 dark:text-stone-300' : ''">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-5" viewBox="0 0 16 16">
+				<path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"/>
+			</svg>
+		</button>
+		<button x-data @click="$store.darkMode.dark()" class="rounded-full size-8 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none" :class="$store.darkMode.mode == 'dark' ? 'bg-stone-200 dark:bg-stone-700 text-stone-900 dark:text-stone-300' : ''">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-5" viewBox="0 0 16 16">
+				<path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+				<path d="M11.286 1.778a.5.5 0 0 0-.565-.755 4.595 4.595 0 0 0-3.18 5.003 5.5 5.5 0 0 1 1.055.209A3.6 3.6 0 0 1 9.83 2.617a4.593 4.593 0 0 0 4.31 5.744 3.58 3.58 0 0 1-2.241.634q.244.477.394 1a4.59 4.59 0 0 0 3.624-2.04.5.5 0 0 0-.565-.755 3.593 3.593 0 0 1-4.065-5.422z"/>
+			</svg>
+		</button>
+	</div>
 	<div class="max-w-xl">
-		<img class="float-right w-12 sm:w-20 rounded-full border border-stone-200 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" />
+		<img class="float-right w-12 sm:w-20 rounded-full border border-stone-200 dark:border-stone-700 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" />
 	</div>
 	<header class="mb-8">
 		<div class="flex items-center">
-			<div class="flex text-2xl tracking-tight text-stone-950"><a href="..">exploriter</a></div>
+			<div class="flex text-2xl tracking-tight text-stone-950 dark:text-stone-50"><a href="..">exploriter</a></div>
 			<div class="flex font-ibmplex text-xs text-stone-400 ml-2 -mb-1">v41.0</div>
 		</div>
-		<p class="font-light italic text-stone-500 text-sm mb-3">explo(r|it)er. truth-teller; reputable fabulist.</p>
-		<p class="font-light text-sm mb-0"><span class="text-stone-400 italic">aka</span> <strong class="text-stone-500">Jason Hunter Watson</strong></p>
-		<p class="font-light text-sm"><span class="text-stone-400 italic">aka</span> <b class="text-stone-500">Manheim</b></p>
+		<p class="font-light italic text-stone-500 dark:text-stone-400 text-sm mb-3">explo(r|it)er. truth-teller; reputable fabulist.</p>
+		<p class="font-light text-sm mb-0"><span class="text-stone-400 dark:text-stone-500 italic">aka</span> <strong class="text-stone-500 dark:text-stone-400">Jason Hunter Watson</strong></p>
+		<p class="font-light text-sm"><span class="text-stone-400 dark:text-stone-500 italic">aka</span> <b class="text-stone-500 dark:text-stone-400">Manheim</b></p>
 	</header>
 	<main class="font-light max-w-xl">
 		<p>I do my best work when I participate in the freedom to explore complex ideas, clarify complicated systems, and get my hands dirty <em>in the work</em>. Preferably, in conscious (in-person) collaboration with others&mdash;who are committed to <em>the good</em>, <em>the true</em>, and <em>the beautiful</em>.</p>
