@@ -15,7 +15,7 @@
 	<script defer src="./output.js"></script>
 </head>
 <body class="antialiased font-averia text-stone-900 dark:text-stone-50 px-10 md:px-14 md:py-10 py-8 dark:bg-stone-900 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">  
-	<div class="border rounded-full border-stone-200 dark:border-stone-700 p-1 flex fixed bottom-6 right-6">
+	<div class="border rounded-full border-stone-200 dark:border-stone-700 p-1 flex fixed bottom-6 right-6 dark:bg-stone-900 bg-stone-50">
 		<button x-data @click="$store.darkMode.light()" class="rounded-full size-8 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none" :class="$store.darkMode.mode == 'light' ? 'bg-stone-200 text-stone-900' : ''">
 			
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-5" viewBox="0 0 16 16">
