@@ -11,14 +11,13 @@
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Vollkorn&family=EB+Garamond&family=Pirata+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Vollkorn&family=EB+Garamond&family=Pirata+One&display=swap" rel="stylesheet">
 	<link href="../output.css" rel="stylesheet">
 	<script defer src="../output.js"></script>
 </head>
-<body class="antialiased font-averia text-stone-900 dark:text-stone-50 px-10 md:px-14 md:py-10 py-8 bg-stone-50 dark:bg-stone-900 selection:bg-yellow-300 selection:text-yellow-900">
-	<div class="border rounded-full border-stone-200 dark:border-stone-700 p-1 flex fixed bottom-6 right-6 dark:bg-stone-900 bg-stone-50">
+<body class="antialiased font-ibmplex text-stone-900 dark:text-stone-50 p-8 sm:p-10 md:p-14 pb-16 dark:bg-stone-900 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">  
+	<div class="border rounded-full border-stone-200 dark:border-stone-700 p-1 flex fixed bottom-6 right-6 dark:bg-stone-900 bg-stone-50 z-10">
 		<button x-data @click="$store.darkMode.light()" class="rounded-full size-10 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none" :class="$store.darkMode.mode == 'light' ? 'bg-stone-200 text-stone-900' : ''">
-			
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6" viewBox="0 0 16 16">
 				<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
 			</svg>
@@ -35,131 +34,180 @@
 			</svg>
 		</button>
 	</div>
-	<div class="max-w-4xl">
-		<img class="float-right w-12 rounded-full border border-stone-200 dark:border-stone-700 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" />
-	</div>
-	<header class="mb-8">
-		<div class="flex items-baseline">
-			<div class="flex text-3xl tracking-tight text-stone-950 dark:text-stone-50"><a href="..">exploriter</a></div>
-			<div class="flex font-ibmplex text-sm text-stone-400 ml-2 -mb-1">v41.0</div>
+	<div class="max-w-screen-lg mx-auto border border-dashed rounded border-stone-400 dark:border-stone-700">
+		<div class="flex-none md:flex">
+			<div class="flex shrink">
+				<div class="border-r border-dashed border-stone-400 dark:border-stone-700 content-center relative p-5 shrink-0">
+					<div class="absolute -top-3 right-3 -mt-[2px]">
+						<div class="text-xs bg-stone-50 dark:bg-stone-900 p-1 text-stone-400 dark:text-stone-600">/avatar</div>
+					</div>
+					<div class="flex justify-center">
+						<img class="size-12 md:size-16 rounded-full border border-stone-200 dark:border-stone-700 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" />
+					</div>
+				</div>
+				<div class="md:border-r border-dashed border-stone-400 dark:border-stone-700 content-center relative p-5 shrink">
+					<div class="absolute -top-3 right-3 -mt-[2px]">
+						<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:text-stone-600 dark:bg-stone-900">/pseudonym</div>
+					</div>
+					<div class="font-averia">
+						<p class="text-2xl sm:text-3xl tracking-tight sm:tracking-tight text-stone-950 dark:text-stone-50"><a href="..">exploriter</a> <a href="https://github.com/exploriter/exploriter" target="_blank" class="font-ibmplex no-underline text-xs text-stone-400 border border-stone-200 dark:border-stone-600 dark:hover:border-transparent dark:hover:bg-stone-200 hover:bg-stone-900 hover:text-stone-200 dark:hover:text-stone-900 hover:border-transparent rounded-full px-1.5 py-[2px] mb-4 relative bottom-[3px]">v41.0</a></p>
+						<p class="text-sm md:text-base font-light italic text-stone-500 dark:text-stone-400">explo(r|it)er. truth-teller; reputable fabulist.</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex border-t border-dashed border-stone-400 dark:border-stone-700 md:border-none shrink-0">
+				<div class="border-r border-dashed border-stone-400 dark:border-stone-700 content-center relative p-5 shrink-0">
+					<div class="absolute -top-3 right-3 -mt-[2px]">
+						<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:bg-stone-900 dark:text-stone-600">/prosoponym</div>
+					</div>
+					<div>
+						<p class="font-light text-xs md:text-sm"><span class="text-stone-400 dark:text-stone-500 italic">aka</span> <strong class="text-stone-500 dark:text-stone-400 font-semibold text-sm md:text-base select-all">Jason Watson</strong></p>
+						<p class="font-light text-xs md:text-sm"><span class="text-stone-400 dark:text-stone-500 italic">aka</span> <b class="text-stone-500 dark:text-stone-400 font-medium text-sm md:text-base select-all">Manheim</b></p>
+					</div>
+				</div>
+				<div class="content-center relative p-5">
+					<div class="absolute -top-3 right-3 -mt-[2px]">
+						<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:bg-stone-900 dark:text-stone-600">/socials</div>
+					</div>
+					<div class="flex items-center gap-x-3.5">
+						<a href="https://x.com/exploriter" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-5 text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-stone-100" viewBox="0 0 16 16">
+								<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+							</svg>
+						</a>
+						<a href="https://github.com/gigawatson" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-5 text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-stone-100" viewBox="0 0 16 16">
+								<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+							</svg>
+						</a>
+						<a href="https://substack.com/@exploriter" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-5 text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-stone-100" viewBox="0 0 16 16">
+								<path d="M15 3.604H1v1.891h14v-1.89ZM1 7.208V16l7-3.926L15 16V7.208zM15 0H1v1.89h14z"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<p class="font-light italic text-stone-500 dark:text-stone-400 mb-3">explo(r|it)er. truth-teller; reputable fabulist.</p>
-	</header>
-	<main class="font-light max-w-4xl text-lg leading-relaxed pb-10">
-		<header class="flex items-center gap-x-1.5 mb-8">
-			<h1 class="italic">A selection of favorites.</h1>
-		</header>
-		<header class="flex items-center gap-x-1.5 mb-4">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4" viewBox="0 0 16 16">
-				<path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
-			</svg>
-			<h2 class="font-ibmplex text-lg font-normal border-b border-stone-300 dark:border-stone-600 border-dashed">Books</h2>
-		</header>
-		<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400 border-b border-stone-300 dark:border-stone-600 border-dashed pb-8">
-			<li>The Matter with Things &middot; <i>Iain McGilchrist</i></li>
-			<li>Leonardo the Florentine &middot; <i>Rachel Annand Taylor</i></li>
-			<li>Speaker for the Dead &middot; <i>Orson Scott Card</i></li>
-			<li>Several Short Sentences About Writing &middot; <i>Verlyn Klinkenborg</i></li>
-			<li>Saint Francis of Assisi &middot; <i>G. K. Chesterton</i></li>
-			<li>The Art of Loving &middot; <i>Erich Fromm</i></li>
-			<li>On Dialogue &middot; <i>David Bohm</i></li>
-			<li>Finite and Infinite Games &middot; <i>James P. Carse</i></li>
-			<li>The Dawn of Everything &middot; <i>David Graeber</i> & <i>David Wengrow</i></li>
-			<li>Awareness &middot; <i>Anthony de Mello</i></li>
-		</ol>
-		<header class="flex items-center gap-x-1.5 mb-4">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4" viewBox="0 0 16 16">
-				<path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"/>
-			</svg>
-			<h2 class="font-ibmplex text-lg font-normal border-b border-stone-300 dark:border-stone-600 border-dashed">TV</h2>
-		</header>
-		<ol class="flex flex-wrap gap-x-3 gap-y-13 mb-8 list-decimal list-inside marker:text-stone-400 border-b border-stone-300 dark:border-stone-600 border-dashed pb-8">
-			<li>Black Sails</li>
-			<li>Justified</li>
-			<li>Burn Notice</li>
-			<li>The Last Kingdom</li>
-			<li>The Last of Us</li>
-			<li>Deadwood</li>
-		</ol>
-		<header class="flex items-center gap-x-1.5 mb-4">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4" viewBox="0 0 16 16">
-				<path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
-			</svg>
-			<h2 class="font-ibmplex text-lg font-normal border-b border-stone-300 dark:border-stone-600 border-dashed">Movies</h2>
-		</header>
-		<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400 border-b border-stone-300 dark:border-stone-600 border-dashed pb-8">
-			<li>Willow</li>
-			<li>Labyrinth</li>
-			<li>The King</li>
-			<li>The Count of Monte Cristo</li>
-			<li>Short Circuit 2</li>
-			<li>Arrival</li>
-			<li>The Silence of The Lambs</li>
-			<li>Old Henry</li>
-			<li>The Wizard</li>
-			<li>Die Hard with a Vengeance</li>
-			<li>Demolition Man</li>
-			<li>The Sword in the Stone</li>
-			<li>Se7en</li>
-			<li>The Green Mile</li>
-			<li>No Country for Old Men</li>
-			<li>Groundhog Day</li>
-			<li>Young Guns</li>
-			<li>The 'Burbs</li>
-			<li>The Sandlot</li>
-			<li>From Dusk Till Dawn</li>
-			<li>The Karate Kid</li>
-			<li>Gladiator</li>
-			<li>Jurassic Park</li>
-			<li>Braveheart</li>
-			<li>Jaws</li>
-		</ol>
-		<header class="flex items-center gap-x-1.5 mb-4">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4" viewBox="0 0 16 16">
-				<path d="m7.788 2.34-.799 1.278A.25.25 0 0 0 7.201 4h1.598a.25.25 0 0 0 .212-.382l-.799-1.279a.25.25 0 0 0-.424 0Zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12h1.598a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0ZM3.617 9.01 2.34 8.213a.25.25 0 0 1 0-.424l1.278-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.383.212Zm10.043-.798-1.277.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z"/>
-				<path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zM6 1.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 11.5 6h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a1.5 1.5 0 0 0-1.5 1.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 4.5 10h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 6 4.5z"/>
-			</svg>
-			<h2 class="font-ibmplex text-lg font-normal border-b border-stone-300 dark:border-stone-600 border-dashed">Video Games</h2>
-		</header>
-		<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400 border-b border-stone-300 dark:border-stone-600 border-dashed pb-8">
-			<li>Red Dead Redemption 2</li>
-			<li>The Last of Us Part I</li>
-			<li>The Last of Us Part II</li>
-			<li>God of War Ragnarök</li>
-			<li>The Witcher: Wild Hunt</li>
-			<li>Assassin's Creed Origins</li>
-			<li>Assassin's Creed Odyssey</li>
-			<li>Assassin's Creed Black Flag</li>
-			<li>Psychonauts 2</li>
-			<li>BioShock</li>
-			<li>BioShock 2</li>
-			<li>Gears of War 2</li>
-			<li>Destiny</li>
-			<li>Star Wars: Knights of the Old Republic</li>
-			<li>World of Warcraft</li>
-			<li>Chrono Trigger</li>
-			<li>The Elder Scrolls V: Skyrim</li>
-			<li>Secret of Mana</li>
-			<li>Day of the Tentacle</li>
-			<li>EarthBound</li>
-			<li>Portal 2</li>
-			<li>Mass Effect 2</li>
-			<li>The Legend of Zelda: A Link to the Past</li>
-			<li>Kid Chameleon</li>
-		</ol>
-		<header class="flex items-center gap-x-1.5 mb-4">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4" viewBox="0 0 16 16">
-				<path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM2.622 13.666v.522q0 .384-.117.641a.86.86 0 0 1-.322.387.9.9 0 0 1-.47.126.9.9 0 0 1-.47-.126.87.87 0 0 1-.32-.386 1.55 1.55 0 0 1-.117-.642v-.522q0-.386.117-.641a.87.87 0 0 1 .32-.387.87.87 0 0 1 .47-.129q.265 0 .47.13a.86.86 0 0 1 .322.386q.117.255.117.641m.803.519v-.513q0-.565-.205-.972a1.46 1.46 0 0 0-.59-.63q-.38-.22-.916-.22-.534 0-.92.22a1.44 1.44 0 0 0-.589.627Q0 13.103 0 13.672v.513q0 .563.205.973.205.406.589.627.386.216.92.216.536 0 .917-.216a1.47 1.47 0 0 0 .589-.627q.204-.41.205-.973m2 1.74v-3.337H6.56v-.662H3.497v.662H4.63v3.337h.794Zm2.251-1.59v1.59h-.79v-3.999h2.548v.653H7.676v1.117h1.606v.638z"/>
-			</svg>
-			<h2 class="font-ibmplex text-lg font-normal border-b border-stone-300 dark:border-stone-600 border-dashed">Typefaces</h2>
-		</header>
-		<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400 text-3xl items-baseline">
-			<li>Averia Serif Libre</li>
-			<li class="font-vollkorn font-normal">Vollkorn</li>
-			<li class="font-pirataone font-normal">Pirata One</li>
-			<li class="font-ibmplex font-normal">IBM Plex Mono</li>
-			<li class="font-ebgaramond font-normal">EB Garamond</li>
-		</ol>
-	</main>
+		<div class="border-t border-dashed border-stone-400 dark:border-stone-700 px-5 py-6 md:p-9 relative">
+			<div class="absolute -top-3 right-3 -mt-[2px]">
+				<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:bg-stone-900 dark:text-stone-600">/content</div>
+			</div>
+			<div class="text-base md:text-lg leading-relaxed md:leading-relaxed">
+				<h1 class="italic mb-8">A selection of favorites.</h1>
+				<header class="flex items-center gap-x-2 mb-4">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6 text-stone-700 dark:text-stone-400" viewBox="0 0 16 16">
+						<path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+					</svg>
+					<h2 class="text-2xl font-semibold border-b border-stone-400 dark:border-stone-700 border-dashed">Books</h2>
+				</header>
+				<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400">
+					<li>The Matter with Things &middot; <i>Iain McGilchrist</i></li>
+					<li>Leonardo the Florentine &middot; <i>Rachel Annand Taylor</i></li>
+					<li>Speaker for the Dead &middot; <i>Orson Scott Card</i></li>
+					<li>Several Short Sentences About Writing &middot; <i>Verlyn Klinkenborg</i></li>
+					<li>Saint Francis of Assisi &middot; <i>G. K. Chesterton</i></li>
+					<li>The Art of Loving &middot; <i>Erich Fromm</i></li>
+					<li>On Dialogue &middot; <i>David Bohm</i></li>
+					<li>Finite and Infinite Games &middot; <i>James P. Carse</i></li>
+					<li>The Dawn of Everything &middot; <i>David Graeber</i> & <i>David Wengrow</i></li>
+					<li>Awareness &middot; <i>Anthony de Mello</i></li>
+				</ol>
+				<header class="flex items-center gap-x-2 mb-4">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6 text-stone-700 dark:text-stone-400" viewBox="0 0 16 16">
+						<path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"/>
+					</svg>
+					<h2 class="text-2xl font-semibold border-b border-stone-400 dark:border-stone-700 border-dashed">TV</h2>
+				</header>
+				<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400">
+					<li>Black Sails</li>
+					<li>Justified</li>
+					<li>Burn Notice</li>
+					<li>The Last Kingdom</li>
+					<li>The Last of Us</li>
+					<li>Deadwood</li>
+				</ol>
+				<header class="flex items-center gap-x-2 mb-4">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6 text-stone-700 dark:text-stone-400" viewBox="0 0 16 16">
+						<path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
+					</svg>
+					<h2 class="text-2xl font-semibold border-b border-stone-400 dark:border-stone-700 border-dashed">Movies</h2>
+				</header>
+				<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400">
+					<li>Willow</li>
+					<li>Labyrinth</li>
+					<li>The King</li>
+					<li>The Count of Monte Cristo</li>
+					<li>Short Circuit 2</li>
+					<li>Arrival</li>
+					<li>The Silence of The Lambs</li>
+					<li>Old Henry</li>
+					<li>The Wizard</li>
+					<li>Die Hard with a Vengeance</li>
+					<li>Demolition Man</li>
+					<li>The Sword in the Stone</li>
+					<li>Se7en</li>
+					<li>The Green Mile</li>
+					<li>No Country for Old Men</li>
+					<li>Groundhog Day</li>
+					<li>Young Guns</li>
+					<li>The 'Burbs</li>
+					<li>The Sandlot</li>
+					<li>From Dusk Till Dawn</li>
+					<li>The Karate Kid</li>
+					<li>Gladiator</li>
+					<li>Jurassic Park</li>
+					<li>Braveheart</li>
+					<li>Jaws</li>
+				</ol>
+				<header class="flex items-center gap-x-2 mb-4">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6 text-stone-700 dark:text-stone-400" viewBox="0 0 16 16">
+						<path d="m7.788 2.34-.799 1.278A.25.25 0 0 0 7.201 4h1.598a.25.25 0 0 0 .212-.382l-.799-1.279a.25.25 0 0 0-.424 0Zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12h1.598a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0ZM3.617 9.01 2.34 8.213a.25.25 0 0 1 0-.424l1.278-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.383.212Zm10.043-.798-1.277.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z"/>
+						<path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zM6 1.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 11.5 6h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a1.5 1.5 0 0 0-1.5 1.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 4.5 10h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 6 4.5z"/>
+					</svg>
+					<h2 class="text-2xl font-semibold border-b border-stone-400 dark:border-stone-700 border-dashed">Video Games</h2>
+				</header>
+				<ol class="flex flex-wrap gap-x-3 gap-y-1 mb-8 list-decimal list-inside marker:text-stone-400">
+					<li>Red Dead Redemption 2</li>
+					<li>The Last of Us Part I</li>
+					<li>The Last of Us Part II</li>
+					<li>God of War Ragnarök</li>
+					<li>The Witcher: Wild Hunt</li>
+					<li>Assassin's Creed Origins</li>
+					<li>Assassin's Creed Odyssey</li>
+					<li>Assassin's Creed Black Flag</li>
+					<li>Psychonauts 2</li>
+					<li>BioShock</li>
+					<li>BioShock 2</li>
+					<li>Gears of War 2</li>
+					<li>Destiny</li>
+					<li>Star Wars: Knights of the Old Republic</li>
+					<li>World of Warcraft</li>
+					<li>Chrono Trigger</li>
+					<li>The Elder Scrolls V: Skyrim</li>
+					<li>Secret of Mana</li>
+					<li>Day of the Tentacle</li>
+					<li>EarthBound</li>
+					<li>Portal 2</li>
+					<li>Mass Effect 2</li>
+					<li>The Legend of Zelda: A Link to the Past</li>
+					<li>Kid Chameleon</li>
+				</ol>
+				<header class="flex items-center gap-x-2 mb-4">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6 text-stone-700 dark:text-stone-400" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM2.622 13.666v.522q0 .384-.117.641a.86.86 0 0 1-.322.387.9.9 0 0 1-.47.126.9.9 0 0 1-.47-.126.87.87 0 0 1-.32-.386 1.55 1.55 0 0 1-.117-.642v-.522q0-.386.117-.641a.87.87 0 0 1 .32-.387.87.87 0 0 1 .47-.129q.265 0 .47.13a.86.86 0 0 1 .322.386q.117.255.117.641m.803.519v-.513q0-.565-.205-.972a1.46 1.46 0 0 0-.59-.63q-.38-.22-.916-.22-.534 0-.92.22a1.44 1.44 0 0 0-.589.627Q0 13.103 0 13.672v.513q0 .563.205.973.205.406.589.627.386.216.92.216.536 0 .917-.216a1.47 1.47 0 0 0 .589-.627q.204-.41.205-.973m2 1.74v-3.337H6.56v-.662H3.497v.662H4.63v3.337h.794Zm2.251-1.59v1.59h-.79v-3.999h2.548v.653H7.676v1.117h1.606v.638z"/>
+					</svg>
+					<h2 class="text-2xl font-semibold border-b border-stone-400 dark:border-stone-700 border-dashed">Typefaces</h2>
+				</header>
+				<ol class="flex flex-wrap gap-x-3 gap-y-1 list-decimal list-inside marker:text-stone-400 items-baseline text-3xl">
+					<li class="font-averia font-normal">Averia Serif Libre</li>
+					<li class="font-vollkorn font-normal">Vollkorn</li>
+					<li class="font-pirataone font-normal">Pirata One</li>
+					<li class="font-normal">IBM Plex Mono</li>
+					<li class="font-ebgaramond font-normal">EB Garamond</li>
+				</ol>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
