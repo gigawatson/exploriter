@@ -12,7 +12,7 @@
 	<link href="../output.css" rel="stylesheet">
 	<script defer src="../output.js"></script>
 </head>
-<body class="antialiased font-ibmplex text-stone-900 dark:text-stone-200 p-8 sm:p-10 md:p-14 pb-16 dark:bg-stone-900 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">  
+<body class="antialiased font-ibmplex text-stone-900 dark:text-stone-200 p-8 sm:p-10 md:p-14 pb-24 sm:pb-24 md:pb-24 dark:bg-stone-900 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">  
 	<div class="border rounded-full border-stone-200 dark:border-stone-600 p-1 flex fixed bottom-6 right-6 dark:bg-stone-900 bg-stone-50 z-10">
 		<button x-data @click="$store.darkMode.light()" class="rounded-full size-10 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none" :class="$store.darkMode.mode == 'light' ? 'bg-stone-200 text-stone-900' : ''">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6" viewBox="0 0 16 16">
@@ -31,6 +31,13 @@
 			</svg>
 		</button>
 	</div>
+	<div class="fixed bottom-6 left-6 z-10 rounded-full dark:bg-stone-900 bg-stone-50 p-1">
+		<a href="https://exploriter.studio/" target="_blank" title="Made by exploriter.studio">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-10 rotate-12 text-stone-200 dark:text-stone-800" fill="currentColor">
+				<path d="M478-763q114.28 0 210.64 49Q785-665 832-584q3 5 .5 13.5T823-559q-8 3-14.45.11-6.46-2.89-9.55-9.11-44-74-130.46-116.5Q582.08-727 478-727q-103 0-189.5 43.5T159-568q-4 7-11 8.5t-15-2.5q-4.5-3-6.75-10t-.25-12q49-80 144.09-129.5Q365.17-763 478-763Zm.05 96Q605-667 694.5-577.44 784-487.88 784-360q0 47.86-32.75 81.43Q718.49-245 671-245q-47 0-80.5-33.57T557-360q0-32-22.48-55-22.47-23-53.52-23-31.87 0-55.43 22.73Q402-392.54 402-360q0 109.99 61.5 166.5Q525-137 597-137q7.55-.94 14.27 3.87 6.73 4.82 6.73 12.32 0 7.81-5 13.81-5 6-14 6-84 0-158.5-66.05T366-360q0-48 33.5-81t80.57-33q47.07 0 80 33T593-360q0 32.54 22.69 55.27 22.7 22.73 54 22.73 31.31 0 54.81-23 23.5-23 23.5-55 0-111.54-79.3-190.77Q589.39-630 477.2-630q-112.2 0-190.7 79.03Q208-471.95 208-359q0 29.5 7.5 57.75T234-247q4 6 2 12.5t-9 11.5q-7 4-14 1.43-7-2.56-10-9.43-15-34-22.5-65.5T173-360q0-127.88 89.04-217.44T478.05-667ZM480-859q67.68 0 130.43 17 62.74 17 115.57 49 8 4 9.5 12t-2.5 15q-4 6-12 7t-12-2q-47-32-106.97-46-59.98-14-122.52-14-62.51 0-122.01 16.5Q298-788 247-761q-4 2-11 .5t-10-7.5q-3-5-2.5-13t6.5-11q53-34 117-50.5T480-859Zm.05 289Q554-570 610-520q56 50 73 131 2 7.3-1.85 14.15Q677.3-368 670-366q-7 2-13.5-1.85T648-379q-14-68-60.48-111.5-46.47-43.5-107.5-43.5-71.02 0-122.52 58T306-336.08q0 56.08 24.5 107.58t63.5 83.31q8 6.19 8 13.69 0 7.5-3 12.5-4 6-11.5 7.5T373-115q-45-36-74-97t-29-124.03Q270-434 331.05-502q61.04-68 149-68Zm-1.26 192q7.21 0 12.71 5.2 5.5 5.2 5.5 12.8 0 78.07 53.5 119.04Q604-200 670-200q16 0 26.5-2t19.5-4q5-1 11 2t8 10.21q2 7.51-2 14.15-4 6.64-12 8.64-5 0-16.5 3.5T670-164q-92 0-150.5-56.58T461-360q0-7.6 5.29-12.8 5.3-5.2 12.5-5.2Z"></path>
+			</svg>
+		</a>
+	</div>
 	<div class="max-w-screen-lg mx-auto border border-dashed rounded border-stone-400 dark:border-stone-600">
 		<div class="flex-none md:flex">
 			<div class="flex shrink">
@@ -39,7 +46,7 @@
 						<div class="text-xs bg-stone-50 dark:bg-stone-900 p-1 text-stone-400 dark:text-stone-600">/avatar</div>
 					</div>
 					<div class="flex justify-center">
-						<img class="size-12 md:size-16 rounded-full border border-stone-200 dark:border-stone-600 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" />
+						<a href=".."><img class="size-12 md:size-16 rounded-full border border-stone-200 dark:border-stone-600 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" /></a>
 					</div>
 				</div>
 				<div class="md:border-r border-dashed border-stone-400 dark:border-stone-600 content-center relative p-5 shrink">
@@ -112,6 +119,19 @@
 				<p class="mb-8">Outside the business realm, I have recently taken up the art and craft of drawing and am exploring relief wood carving.</p>
 				<p>I maintain a diverse physical fitness practice that includes kettlebell training, rope flow, stability ball, elements of qigong, bodyweight floor movements, breathwork, and all the fresh air and sunshine I can get.</p>
 			</div>
+		</div>
+		<div class="border-t border-dashed border-stone-400 dark:border-stone-600 px-5 py-4 md:px-9 md:py-4 relative flex justify-between text-sm">
+			<div class="absolute -top-3 right-3 -mt-[2px]">
+				<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:bg-stone-900 dark:text-stone-600">/footer</div>
+			</div>
+			<p class="flex items-center text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-stone-50 group">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-4 mr-1.5 group-hover:text-stone-950 dark:group-hover:text-stone-50" viewBox="0 0 16 16">
+					<path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+					<path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+				</svg>
+				<a href="mailto:jason@exploriter.com" target="_blank">Contact</a>
+			</p>
+			<p class="text-stone-500">&copy; <span id="year"></span> Exploriter LLC</p>
 		</div>
 	</div>
 </body>
