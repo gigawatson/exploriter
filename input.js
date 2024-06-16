@@ -1,7 +1,21 @@
 import Alpine from 'alpinejs';
+import tippy, {roundArrow} from 'tippy.js';
 window.Alpine = Alpine;
 
 document.addEventListener('alpine:init', () => {
+	
+	// Tooltips using Tippy.js
+	Alpine.directive('tooltip', (el, {expression}) => {
+		tippy(el, { 
+			content: expression,
+			arrow: roundArrow,
+			animation: 'scale-subtle',
+			inertia: true,
+			allowHTML: true,
+		})
+	})
+
+	// Dark/Light Mode Toggle
 	Alpine.store('darkMode', {
 		mode: 'light',
 
@@ -16,7 +30,6 @@ document.addEventListener('alpine:init', () => {
 				this.system()
 			}
 		},
-
 		dark() {
 			document.documentElement.classList.add('dark')
 			localStorage.theme = 'dark'
