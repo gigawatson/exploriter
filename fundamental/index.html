@@ -12,8 +12,8 @@
 	<link href="../output.css" rel="stylesheet">
 	<script defer src="../output.js"></script>
 </head>
-<body class="antialiased font-ibmplex text-stone-900 dark:text-stone-50 p-8 sm:p-10 md:p-14 pb-16 dark:bg-stone-900 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">  
-	<div class="border rounded-full border-stone-200 dark:border-stone-700 p-1 flex fixed bottom-6 right-6 dark:bg-stone-900 bg-stone-50 z-10">
+<body class="antialiased font-ibmplex text-stone-900 dark:text-stone-200 p-8 sm:p-10 md:p-14 pb-16 dark:bg-stone-900 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">  
+	<div class="border rounded-full border-stone-200 dark:border-stone-600 p-1 flex fixed bottom-6 right-6 dark:bg-stone-900 bg-stone-50 z-10">
 		<button x-data @click="$store.darkMode.light()" class="rounded-full size-10 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none" :class="$store.darkMode.mode == 'light' ? 'bg-stone-200 text-stone-900' : ''">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6" viewBox="0 0 16 16">
 				<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
@@ -31,18 +31,18 @@
 			</svg>
 		</button>
 	</div>
-	<div class="max-w-screen-lg mx-auto border border-dashed rounded border-stone-400 dark:border-stone-700">
+	<div class="max-w-screen-lg mx-auto border border-dashed rounded border-stone-400 dark:border-stone-600">
 		<div class="flex-none md:flex">
 			<div class="flex shrink">
-				<div class="border-r border-dashed border-stone-400 dark:border-stone-700 content-center relative p-5 shrink-0">
+				<div class="border-r border-dashed border-stone-400 dark:border-stone-600 content-center relative p-5 shrink-0">
 					<div class="absolute -top-3 right-3 -mt-[2px]">
 						<div class="text-xs bg-stone-50 dark:bg-stone-900 p-1 text-stone-400 dark:text-stone-600">/avatar</div>
 					</div>
 					<div class="flex justify-center">
-						<img class="size-12 md:size-16 rounded-full border border-stone-200 dark:border-stone-700 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" />
+						<img class="size-12 md:size-16 rounded-full border border-stone-200 dark:border-stone-600 p-0.5 shadow-sm" alt="exploriter avatar" src="../exploriter.png" />
 					</div>
 				</div>
-				<div class="md:border-r border-dashed border-stone-400 dark:border-stone-700 content-center relative p-5 shrink">
+				<div class="md:border-r border-dashed border-stone-400 dark:border-stone-600 content-center relative p-5 shrink">
 					<div class="absolute -top-3 right-3 -mt-[2px]">
 						<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:text-stone-600 dark:bg-stone-900">/pseudonym</div>
 					</div>
@@ -52,8 +52,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex border-t border-dashed border-stone-400 dark:border-stone-700 md:border-none shrink-0">
-				<div class="border-r border-dashed border-stone-400 dark:border-stone-700 content-center relative p-5 shrink-0">
+			<div class="flex border-t border-dashed border-stone-400 dark:border-stone-600 md:border-none shrink-0">
+				<div class="border-r border-dashed border-stone-400 dark:border-stone-600 content-center relative p-5 shrink-0">
 					<div class="absolute -top-3 right-3 -mt-[2px]">
 						<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:bg-stone-900 dark:text-stone-600">/prosoponym</div>
 					</div>
@@ -86,7 +86,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="md:pr-[25%] border-t border-dashed border-stone-400 dark:border-stone-700 px-5 py-6 md:p-9 relative">
+		<div class="md:pr-[25%] border-t border-dashed border-stone-400 dark:border-stone-600 px-5 py-6 md:p-9 relative">
 			<div class="absolute -top-3 right-3 -mt-[2px]">
 				<div class="text-xs bg-stone-50 p-1 text-stone-400 dark:bg-stone-900 dark:text-stone-600">/content</div>
 			</div>
