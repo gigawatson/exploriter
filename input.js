@@ -41,5 +41,3 @@ document.addEventListener('alpine:init', () => {
 })
 
 Alpine.start();
-
-document.getElementById('year').innerHTML = new Date().getFullYear();
