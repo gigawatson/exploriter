@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-	
 	@font-face {
 		font-family: 'Averia Serif Libre';
 		font-style: normal;
@@ -116,26 +115,21 @@
 		font-display: swap;
 		src: url(/fonts/IBMPlexMono/ipm-700i.woff2) format('woff2');
 	}
-	
 	em {
 		@apply font-medium;
 	}
-	
 	strong,
 	strong em {
 		@apply font-bold;
 	}
-
 	b,
 	b em {
 		@apply font-semibold;
 	}
-	
 	strong, b {
 		@apply text-stone-950;
 		@apply dark:text-stone-50;
 	}
-	
 	a {
 		@apply underline;
 		@apply decoration-stone-300;

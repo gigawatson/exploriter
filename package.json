@@ -1,8 +1,11 @@
 {
   "scripts": {
-    "watch": "npx tailwindcss -i ./input.css -o ./output.css --watch",
-    "prod": "npx tailwindcss -i ./input.css -o ./output.css --minify",
-    "alpine": "npx esbuild ./input.js --bundle --minify --sourcemap --outfile=./output.js"
+    "watch:alpine": "esbuild ./input.js --outfile=./output.js --bundle --sourcemap --watch",
+    "watch:tailwind": "tailwindcss -i ./input.css -o ./output.css --watch",
+    "build:alpine": "esbuild ./input.js --outfile=./output.js --bundle --minify",
+    "build:tailwind": "tailwindcss -i ./input.css -o ./output.css --minify",
+    "watch": "pnpm \"/^watch:.*/\"",
+    "build": "pnpm \"/^build:.*/\""
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"

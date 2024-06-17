@@ -1,5 +1,6 @@
 import Alpine from 'alpinejs';
 import tippy, {roundArrow} from 'tippy.js';
+
 window.Alpine = Alpine;
 
 document.addEventListener('alpine:init', () => {
