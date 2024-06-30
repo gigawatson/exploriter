@@ -14,6 +14,7 @@
 	<script defer src="../output.js"></script>
 </head>
 <body class="antialiased font-ibmplex text-stone-900 dark:text-stone-200 p-8 sm:p-10 md:p-14 pb-24 sm:pb-24 md:pb-24 dark:bg-stone-900 bg-stone-50 selection:bg-yellow-300 selection:text-yellow-900">
+
 	<div class="max-w-screen-lg mx-auto border border-dashed rounded border-stone-400 dark:border-stone-600">
 		<div class="flex-none md:flex">
 			<div class="flex shrink">
@@ -76,10 +77,152 @@
 			<div class="text-base md:text-lg leading-relaxed md:leading-relaxed">
 				<p class="mb-7">There are some <strong>fundamental moves</strong> that when you can make them, the world becomes much bigger and brighter.</p>
 				<ol class="list-decimal ml-14 leading-normal">
-					<li class="mb-3"><span class="opacity-60">We <u>have</u> relationships</span> → <b>We <u>are</u> relationships.</b></li>
-					<li class="mb-3"><span class="opacity-60">I'm feeling <code class="bg-stone-200/50 dark:bg-stone-700/50 p-0.5 rounded-sm text-base font-light font-ibmplex">[lost|bored]</code></span> → <b>Seek novelty, make art, help out.</b></li>
-					<li class="mb-3"><span class="opacity-60">Love is a feeling</span> → <b>Love is an existential stance.</b></li>
-					<li><span class="opacity-60">Buy/Sell</span> → <b>Kindly use; fairly exchange; generously offer.</b></li>
+					<li class="mb-3">
+						<span class="opacity-60">We <u>have</u> relationships</span> → <b>We <u>are</u> relationships.</b>
+						<div class="inline" x-data="{ open: false }">
+							<!-- Trigger -->
+							<button x-on:click="open = true">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-3.5 md:size-4 text-stone-400/75 hover:text-stone-900" viewBox="0 0 16 16">
+									<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+									<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+								</svg>
+							</button>
+					
+							<!-- Modal -->
+							<div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-20 overflow-y-auto">
+								<!-- Overlay -->
+								<div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-60"></div>
+					
+								<!-- Panel -->
+								<div x-show="open" x-transition x-on:click="open = false" class="relative flex min-h-screen items-center justify-center p-4">
+									<div x-on:click.stop x-trap.noscroll.inert="open" class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-stone-50 p-12 shadow-lg">
+										<!-- Title -->
+										<h2 class="text-2xl md:text-3xl font-bold" :id="$id('modal-title')">We are relationships.</h2>
+										
+										<!-- Content -->
+										<div class="text-base md:text-lg leading-relaxed md:leading-relaxed text-stone-700">
+											<p class="mt-3">...</p>
+										</div>
+										
+										<!-- Close Button -->
+										<button type="button" x-on:click="open = false" class="absolute top-4 right-4">
+											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-8" viewBox="0 0 16 16">
+												<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+											</svg>
+										</button>
+									</div>
+								</div> <!-- /Panel -->
+							</div> <!-- /Modal -->
+						</div>
+					</li>
+					<li class="mb-3">
+						<span class="opacity-60">I'm feeling <code class="bg-stone-200/50 dark:bg-stone-700/50 p-0.5 rounded-sm text-base font-light font-ibmplex">[lost|bored]</code></span> → <b>Seek novelty, make art, help out.</b>
+						<div class="inline" x-data="{ open: false }">
+							<!-- Trigger -->
+							<button x-on:click="open = true">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-3.5 md:size-4 text-stone-400/75 hover:text-stone-900" viewBox="0 0 16 16">
+									<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+									<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+								</svg>
+							</button>
+							<!-- Modal -->
+							<div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-20 overflow-y-auto">
+								<!-- Overlay -->
+								<div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-60"></div>
+								<!-- Panel -->
+								<div x-show="open" x-transition x-on:click="open = false" class="relative flex min-h-screen items-center justify-center p-4">
+									<div x-on:click.stop x-trap.noscroll.inert="open" class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-stone-50 p-12 shadow-lg">
+										<!-- Title -->
+										<h2 class="text-2xl md:text-3xl font-bold" :id="$id('modal-title')">Seek novelty, make art, help out.</h2>
+						
+										<!-- Content -->
+										<div class="text-base md:text-lg leading-relaxed md:leading-relaxed text-stone-700">
+											<p class="mt-3">...</p>
+										</div>
+						
+										<!-- Close Button -->
+										<button type="button" x-on:click="open = false" class="absolute top-4 right-4">
+											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-8" viewBox="0 0 16 16">
+												<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+											</svg>
+										</button>
+									</div>
+								</div> <!-- /Panel -->
+							</div> <!-- /Modal -->
+						</div>
+					</li>
+					<li class="mb-3">
+						<span class="opacity-60">Love is a feeling</span> → <b>Love is an existential stance.</b>
+						<div class="inline" x-data="{ open: false }">
+							<!-- Trigger -->
+							<button x-on:click="open = true">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-3.5 md:size-4 text-stone-400/75 hover:text-stone-900" viewBox="0 0 16 16">
+									<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+									<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+								</svg>
+							</button>
+							<!-- Modal -->
+							<div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-20 overflow-y-auto">
+								<!-- Overlay -->
+								<div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-60"></div>
+								<!-- Panel -->
+								<div x-show="open" x-transition x-on:click="open = false" class="relative flex min-h-screen items-center justify-center p-4">
+									<div x-on:click.stop x-trap.noscroll.inert="open" class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-stone-50 p-12 shadow-lg">
+										<!-- Title -->
+										<h2 class="text-2xl md:text-3xl font-bold" :id="$id('modal-title')">Love is an existential stance.</h2>
+						
+										<!-- Content -->
+										<div class="text-base md:text-lg leading-relaxed md:leading-relaxed text-stone-700">
+											<p class="mt-3">...</p>
+										</div>
+						
+										<!-- Close Button -->
+										<button type="button" x-on:click="open = false" class="absolute top-4 right-4">
+											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-8" viewBox="0 0 16 16">
+												<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+											</svg>
+										</button>
+									</div>
+								</div> <!-- /Panel -->
+							</div> <!-- /Modal -->
+						</div>
+					</li>
+					<li>
+						<span class="opacity-60">Buy/Sell</span> → <b>Kindly use; fairly exchange; generously offer.</b>
+						<div class="inline" x-data="{ open: false }">
+							<!-- Trigger -->
+							<button x-on:click="open = true">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-3.5 md:size-4 text-stone-400/75 hover:text-stone-900" viewBox="0 0 16 16">
+									<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+									<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+								</svg>
+							</button>
+							<!-- Modal -->
+							<div x-show="open" style="display: none" x-on:keydown.escape.prevent.stop="open = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-20 overflow-y-auto">
+								<!-- Overlay -->
+								<div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-60"></div>
+								<!-- Panel -->
+								<div x-show="open" x-transition x-on:click="open = false" class="relative flex min-h-screen items-center justify-center p-4">
+									<div x-on:click.stop x-trap.noscroll.inert="open" class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-stone-50 p-12 shadow-lg">
+										<!-- Title -->
+										<h2 class="text-2xl md:text-3xl font-bold" :id="$id('modal-title')">Kindly use; fairly exchange; generously offer.</h2>
+						
+										<!-- Content -->
+										<div class="text-base md:text-lg leading-relaxed md:leading-relaxed text-stone-700">
+											<p class="mt-3">...</p>
+										</div>
+						
+										<!-- Close Button -->
+										<button type="button" x-on:click="open = false" class="absolute top-4 right-4">
+											<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-8" viewBox="0 0 16 16">
+												<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+											</svg>
+										</button>
+									</div>
+								</div> <!-- /Panel -->
+							</div> <!-- /Modal -->
+						</div>
+					</li>
 				</ol>
 			</div>
 		</div>

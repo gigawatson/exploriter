@@ -1,7 +1,9 @@
 import Alpine from 'alpinejs';
 import tippy, {roundArrow} from 'tippy.js';
+import focus from '@alpinejs/focus';
 
 window.Alpine = Alpine;
+Alpine.plugin(focus);
 
 document.addEventListener('alpine:init', () => {
 	
