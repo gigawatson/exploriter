@@ -11,7 +11,7 @@ module.exports = {
         'averia': ['"Averia Serif Libre"', ...defaultTheme.fontFamily.serif],
         'ibmplex': ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
         'vollkorn': ['"Vollkorn"', ...defaultTheme.fontFamily.serif],
-        'ebgaramond': ['"EB Garamond"', ...defaultTheme.fontFamily.serif],
+        'lexend': ['"Lexend"', ...defaultTheme.fontFamily.sans],
         'pirataone': ['"Pirata One"', ...defaultTheme.fontFamily.serif],
       },
     },
