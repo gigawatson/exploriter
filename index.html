@@ -80,14 +80,14 @@
 					<p class="mb-8">Here, there be <em>links</em>.</p>
 				</div>
 				<div class="overflow-x-auto shadow ring-1 ring-stone-950 dark:ring-stone-600 ring-opacity-5 rounded">
-					<table id="myTable" class="table-auto min-w-full divide-y divide-stone-300 dark:divide-stone-700 text-sm">
+					<table class="table-auto min-w-full divide-y divide-stone-300 dark:divide-stone-700 text-sm">
 						<thead class="uppercase">
 							<tr>
 								<th class="text-left py-3.5 pr-3 pl-4 font-semibold w-[200px]"></th>
 								<th class="text-left py-3.5 px-3 font-semibold">Description</th>
-								<th onclick="sortTable(0)" class="text-left py-3.5 px-3 font-semibold"><abbr title="Date of Birth">DOB</abbr></th>
-								<th onclick="sortTable(1)" class="text-left py-3.5 px-3 font-semibold">Type</th>
-								<th onclick="sortTable(2)" class="text-left py-3.5 pl-3 pr-4 font-semibold w-[175px]">Current Status</th>
+								<th class="text-left py-3.5 px-3 font-semibold"><abbr title="Date of Birth">DOB</abbr></th>
+								<th class="text-left py-3.5 px-3 font-semibold">Type</th>
+								<th class="text-left py-3.5 pl-3 pr-4 font-semibold w-[175px]">Current Status</th>
 							</tr>
 						</thead>
 						<tbody class="divide-y divide-stone-200 dark:divide-stone-800 align-baseline">
@@ -268,60 +268,4 @@
 		</button>
 	</div>
 </body>
-<script>
-	function sortTable(n) {
-	  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-	  table = document.getElementById("myTable");
-	  switching = true;
-	  //Set the sorting direction to ascending:
-	  dir = "asc"; 
-	  /*Make a loop that will continue until
-	  no switching has been done:*/
-	  while (switching) {
-		//start by saying: no switching is done:
-		switching = false;
-		rows = table.rows;
-		/*Loop through all table rows (except the
-		first, which contains table headers):*/
-		for (i = 1; i < (rows.length - 1); i++) {
-		  //start by saying there should be no switching:
-		  shouldSwitch = false;
-		  /*Get the two elements you want to compare,
-		  one from current row and one from the next:*/
-		  x = rows[i].getElementsByTagName("TD")[n];
-		  y = rows[i + 1].getElementsByTagName("TD")[n];
-		  /*check if the two rows should switch place,
-		  based on the direction, asc or desc:*/
-		  if (dir == "asc") {
-			if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-			  //if so, mark as a switch and break the loop:
-			  shouldSwitch= true;
-			  break;
-			}
-		  } else if (dir == "desc") {
-			if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-			  //if so, mark as a switch and break the loop:
-			  shouldSwitch = true;
-			  break;
-			}
-		  }
-		}
-		if (shouldSwitch) {
-		  /*If a switch has been marked, make the switch
-		  and mark that a switch has been done:*/
-		  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-		  switching = true;
-		  //Each time a switch is done, increase this count by 1:
-		  switchcount ++;      
-		} else {
-		  /*If no switching has been done AND the direction is "asc",
-		  set the direction to "desc" and run the while loop again.*/
-		  if (switchcount == 0 && dir == "asc") {
-			dir = "desc";
-			switching = true;
-		  }
-		}
-	  }
-	}
-</script>
 </html>
