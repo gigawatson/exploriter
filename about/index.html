@@ -102,20 +102,21 @@
             <div class="text-xs bg-stone-50 p-1 text-stone-400 dark:bg-stone-900 dark:text-stone-600">/content</div>
         </div>
         <div class="text-base md:text-lg leading-relaxed md:leading-relaxed max-w-screen-md">
-            <p class="mb-8">I do my best work when exploring complex ideas, clarifying complicated systems, and getting
-                my hands dirty. Preferably, in conscious face-to-face collaboration with others who are committed to
-                <em>the beautiful</em>, <em>the good</em>, and <em>the true</em>.</p>
+            <p class="mb-8">I do my best work when exploring complex ideas, clarifying complicated systems, and/or
+                getting my hands dirty. Preferably, in conscious face-to-face collaboration with others who are
+                committed to <em>goodness</em>, <em>truth</em>, and <em>beauty</em>.</p>
             <h2 class="font-bold text-2xl sm:text-3xl mb-3">Where I've been</h2>
             <p class="mb-12">Over the years, I have explored many domains as a software designer, web developer, product
-                strategist, information architect, writer, fitness trainer, line cook, theatre projectionist, rare coin
-                and diamond merchant, amateur horticulturist, glassblower, and postal worker.</p>
+                strategist, information architect, author, fitness trainer, blogger, line cook, theatre projectionist,
+                rare coin and diamond merchant, amateur horticulturist, glassblower, postal worker, (reformed) amateur
+                corporate cutpurse, and trading card dealer.</p>
             <ul class="list-disc ml-14 mb-12 text-stone-800 dark:text-stone-300">
                 <li class="mb-3"><b>In 2009</b>, I created a recipe blog to learn SEO. Its success landed me a
                     multi-book deal that has since produced a national bestseller, seven translations, and sold over
                     300,000 copies.
                 </li>
                 <li class="mb-3"><b>From 2010 to 2015</b>, I designed and developed over 100 websites for small to
-                    medium-sized businesses under the brand, <em>Designpx</em>.
+                    medium-sized businesses, non-profits, and universities, under the brand, <em>Designpx</em>.
                 </li>
                 <li class="mb-3"><b>From 2014 to 2020</b>, I was part of the core leadership team (CTO) at GMB Fitness.
                     Leading product development and improving team cohesion systems and practices across the company.
@@ -123,7 +124,7 @@
                 <li class="mb-3"><b>From 2020 to 2022</b>, I took a work hiatus to pursue unencumbered thinking,
                     reading, and other philosophical, spiritual, and embodied practices.
                 </li>
-                <li><b>In 2023</b>, I joined the <a href="https://vervaekefoundation.org/" target="_blank">The Vervaeke
+                <li><b>In 2023</b>, I joined <a href="https://vervaekefoundation.org/" target="_blank">The Vervaeke
                     Foundation</a> to help launch their series of websites.
                 </li>
             </ul>
@@ -133,20 +134,19 @@
                 collaborations. Some of which have long lingered in my mind and heart and since they refuse to leave, I
                 must pursue them.</p>
             <ol class="list-decimal ml-14 mb-12 text-stone-800 dark:text-stone-300">
-                <li class="mb-3"><a href="https://expdaily.com" target="v"><strong>exp/daily</strong></a> &mdash; A
-                    learning companion and library, centered around mindful incremental development and minimum daily
-                    practice.
+                <li class="mb-3"><a href="https://expdaily.com" target="v"><strong>exp/daily</strong></a> &mdash; My own
+                    personal knowledge management system, exposed. Centered around incremental networked learning,
+                    through minimum daily practice.
                 </li>
                 <li class="mb-3"><a href="https://exploriter.studio" target="_blank"><strong>Exploriter Studio</strong></a>
-                    &mdash; a highly selective web design and development studio and successor to <em>Designpx</em>.
-                    Focussed on clarity, for discerning clientele, and an homage to simple HTML, CSS, and JS.
+                    &mdash; a highly selective (mostly Wordpress) web design and development studio and successor to
+                    <em>Designpx</em>. Focussed on clarity, for discerning clientele, and an homage to simple, clean,
+                    and minimal HTML, CSS, and JS.
                 </li>
-                <li><a href="https://walking.games" target="_blank"><strong>Walking Games</strong></a> &mdash; a walking
-                    co-(ad)venture.
+                <li><a href="https://walkingcards.com" target="_blank"><strong>Walking Cards</strong></a> &mdash;
+                    walking games—<em>serious play</em> while taking a walk. A walking co-(ad)venture with Rod Howell.
                 </li>
             </ol>
-            <p class="mb-8">I am currently invested in (and investigating) various projects, DAOs, NFTs, and tokens in
-                the Bitcoin and Ethereum ecosystems.</p>
             <p class="mb-8">I maintain a diverse movement practice that includes kettlebell training, rope flow,
                 stability ball, elements of qigong, bodyweight floor movements, breathwork, and all the fresh air,
                 sunshine, and grounding I can get.</p>
@@ -163,9 +163,9 @@
             <p class="mb-8">I thrive in the communal and active part of the ideation process—the work that brings
                 clarity to an idea—and the expansion, enhancement, and attention to detail necessary once something is
                 active in the real world.</p>
-            <p class="mb-8">I am quite indifferent to hierarchical, positions-based organizational structures and prefer
-                a more horizontal, role-based approach for most endeavors, especially where technology and shifting
-                contexts are concerned.</p>
+            <p class="mb-8">I am quite indifferent to strictly hierarchical, positions-based organizational structures
+                and prefer a more horizontal, variable role-based approach for most endeavors, especially where
+                technology and shifting contexts are concerned.</p>
             <p class="mb-8">Ideally, the team I work with is on the smaller side and has a deep understanding, or at
                 least awareness, of how group organizational archetypes (consensus, meritocracy, democracy) work
                 together as a counterbalancing decision-making process for coherent and sustainable small group
@@ -210,21 +210,21 @@
 <div class="border rounded-full border-stone-200 dark:border-stone-600 p-1 flex fixed bottom-6 right-6 dark:bg-stone-900 bg-stone-50 z-10">
     <button x-data x-tooltip="Light Mode" @click="$store.darkMode.light()"
             class="rounded-full size-10 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none"
-            :class="$store.darkMode.mode == 'light' ? 'bg-stone-200 text-stone-900' : ''">
+            :class="$store.darkMode.mode === 'light' ? 'bg-stone-200 text-stone-900' : ''">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6" viewBox="0 0 16 16">
             <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
         </svg>
     </button>
     <button x-data x-tooltip="Mirror System" @click="$store.darkMode.system()"
             class="rounded-full size-10 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none"
-            :class="$store.darkMode.mode == 'system' ? 'bg-stone-200 dark:bg-stone-700 text-stone-900 dark:text-stone-300' : ''">
+            :class="$store.darkMode.mode === 'system' ? 'bg-stone-200 dark:bg-stone-700 text-stone-900 dark:text-stone-300' : ''">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6" viewBox="0 0 16 16">
             <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"/>
         </svg>
     </button>
     <button x-data x-tooltip="Dark Mode" @click="$store.darkMode.dark()"
             class="rounded-full size-10 text-stone-500 hover:text-stone-900 dark:hover:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 flex items-center justify-center focus:outline-none"
-            :class="$store.darkMode.mode == 'dark' ? 'bg-stone-200 dark:bg-stone-700 text-stone-900 dark:text-stone-300' : ''">
+            :class="$store.darkMode.mode === 'dark' ? 'bg-stone-200 dark:bg-stone-700 text-stone-900 dark:text-stone-300' : ''">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-6" viewBox="0 0 16 16">
             <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
             <path d="M11.286 1.778a.5.5 0 0 0-.565-.755 4.595 4.595 0 0 0-3.18 5.003 5.5 5.5 0 0 1 1.055.209A3.6 3.6 0 0 1 9.83 2.617a4.593 4.593 0 0 0 4.31 5.744 3.58 3.58 0 0 1-2.241.634q.244.477.394 1a4.59 4.59 0 0 0 3.624-2.04.5.5 0 0 0-.565-.755 3.593 3.593 0 0 1-4.065-5.422z"/>
