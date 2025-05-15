@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@alpinejs/focus": "^3.14.9",
-    "@tailwindcss/cli": "^4.1.6",
+    "@tailwindcss/cli": "^4.1.7",
     "alpinejs": "^3.14.9",
-    "tailwindcss": "^4.1.6",
+    "tailwindcss": "^4.1.7",
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
